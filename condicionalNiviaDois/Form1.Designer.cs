@@ -40,6 +40,8 @@
             this.lblresult = new System.Windows.Forms.Label();
             this.txtresultado = new System.Windows.Forms.TextBox();
             this.btnlimpar = new System.Windows.Forms.Button();
+            this.lblnomes = new System.Windows.Forms.Label();
+            this.txtapnome = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtnome
@@ -129,7 +131,7 @@
             // 
             this.txtresultado.Location = new System.Drawing.Point(308, 266);
             this.txtresultado.Name = "txtresultado";
-            this.txtresultado.Size = new System.Drawing.Size(169, 20);
+            this.txtresultado.Size = new System.Drawing.Size(100, 20);
             this.txtresultado.TabIndex = 10;
             // 
             // btnlimpar
@@ -141,11 +143,29 @@
             this.btnlimpar.Text = "Limpar";
             this.btnlimpar.UseVisualStyleBackColor = true;
             // 
+            // lblnomes
+            // 
+            this.lblnomes.AutoSize = true;
+            this.lblnomes.Location = new System.Drawing.Point(257, 313);
+            this.lblnomes.Name = "lblnomes";
+            this.lblnomes.Size = new System.Drawing.Size(35, 13);
+            this.lblnomes.TabIndex = 12;
+            this.lblnomes.Text = "Nome";
+            // 
+            // txtapnome
+            // 
+            this.txtapnome.Location = new System.Drawing.Point(308, 306);
+            this.txtapnome.Name = "txtapnome";
+            this.txtapnome.Size = new System.Drawing.Size(100, 20);
+            this.txtapnome.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtapnome);
+            this.Controls.Add(this.lblnomes);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.txtresultado);
             this.Controls.Add(this.lblresult);
@@ -179,6 +199,8 @@
         private System.Windows.Forms.Label lblresult;
         private System.Windows.Forms.TextBox txtresultado;
         private System.Windows.Forms.Button btnlimpar;
+        private System.Windows.Forms.Label lblnomes;
+        private System.Windows.Forms.TextBox txtapnome;
     }
 }
 
