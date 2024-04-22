@@ -19,43 +19,69 @@ namespace condicionalNiviaDois
 
         private void btncalcular_Click(object sender, EventArgs e)
         {
-            double idade, salario, result;
+            double idade, salario, abono, result;
             string nome, sexo;
 
             idade = Convert.ToDouble(txtidade.Text);
             salario = Convert.ToDouble(txtsalario.Text);
             nome = Convert.ToString(txtnome.Text);
             sexo = Convert.ToString(txtsexo.Text);
+  
 
-            if (sexo != "Masculino" || sexo != "Feminino")
-            {
-                txtnome.Clear();
-                txtsexo.Clear();
-                txtidade.Clear();
-                txtsalario.Clear();
-                txtapnome.Text = "Coloque apenas Masculino ou Feminino";
-            }
-            else if (sexo == "Masculino" && idade >= 30)
+            if (sexo == "Masculino" && idade >= 30)
             {
                 txtapnome.Text = nome;
-                result = salario + 100;
+                abono = 100;
+                result = salario + abono;
+                txtresultado.Text = result.ToString();
+                txtabono.Text = abono.ToString();
             }
             else if (sexo == "Masculino" && idade < 30)
             {
                 txtapnome.Text = nome;
-                result = salario + 80;
+                abono = 80;
+                result = salario + abono;
+                txtresultado.Text = result.ToString();
+                txtabono.Text = abono.ToString();
             }
             else if (sexo == "Feminino" && idade >= 30)
             {
                 txtapnome.Text = nome;
-                result = salario + 200;
+                abono = 200;
+                result = salario + abono;
+                txtresultado.Text = result.ToString();
+                txtabono.Text = abono.ToString();
             }
             else if (sexo == "Feminino" && idade < 30)
             {
                 txtapnome.Text = nome;
-                result = salario + 50;
+                abono = 50;
+                result = salario + abono;
+                txtresultado.Text = result.ToString();
+                txtabono.Text = abono.ToString();
             }
-            txtresultado.Text = result.ToString();
+            
+        }
+
+        private void txtresultado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
+            txtapnome.Clear();
+            txtidade.Clear();  
+            txtresultado.Clear();
+            txtnome.Clear();
+            txtsalario.Clear();
+            txtsexo.Clear();
+            txtnome.Focus();
         }
     }
 }

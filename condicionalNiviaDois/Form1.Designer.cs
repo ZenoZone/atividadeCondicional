@@ -42,6 +42,9 @@
             this.btnlimpar = new System.Windows.Forms.Button();
             this.lblnomes = new System.Windows.Forms.Label();
             this.txtapnome = new System.Windows.Forms.TextBox();
+            this.btnsair = new System.Windows.Forms.Button();
+            this.lblabono = new System.Windows.Forms.Label();
+            this.txtabono = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtnome
@@ -121,7 +124,7 @@
             // lblresult
             // 
             this.lblresult.AutoSize = true;
-            this.lblresult.Location = new System.Drawing.Point(237, 269);
+            this.lblresult.Location = new System.Drawing.Point(237, 303);
             this.lblresult.Name = "lblresult";
             this.lblresult.Size = new System.Drawing.Size(55, 13);
             this.lblresult.TabIndex = 9;
@@ -129,10 +132,12 @@
             // 
             // txtresultado
             // 
-            this.txtresultado.Location = new System.Drawing.Point(308, 266);
+            this.txtresultado.Enabled = false;
+            this.txtresultado.Location = new System.Drawing.Point(308, 296);
             this.txtresultado.Name = "txtresultado";
             this.txtresultado.Size = new System.Drawing.Size(100, 20);
             this.txtresultado.TabIndex = 10;
+            this.txtresultado.TextChanged += new System.EventHandler(this.txtresultado_TextChanged);
             // 
             // btnlimpar
             // 
@@ -142,11 +147,12 @@
             this.btnlimpar.TabIndex = 11;
             this.btnlimpar.Text = "Limpar";
             this.btnlimpar.UseVisualStyleBackColor = true;
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
             // lblnomes
             // 
             this.lblnomes.AutoSize = true;
-            this.lblnomes.Location = new System.Drawing.Point(257, 313);
+            this.lblnomes.Location = new System.Drawing.Point(257, 340);
             this.lblnomes.Name = "lblnomes";
             this.lblnomes.Size = new System.Drawing.Size(35, 13);
             this.lblnomes.TabIndex = 12;
@@ -154,16 +160,47 @@
             // 
             // txtapnome
             // 
-            this.txtapnome.Location = new System.Drawing.Point(308, 306);
+            this.txtapnome.Enabled = false;
+            this.txtapnome.Location = new System.Drawing.Point(308, 333);
             this.txtapnome.Name = "txtapnome";
             this.txtapnome.Size = new System.Drawing.Size(100, 20);
             this.txtapnome.TabIndex = 13;
+            // 
+            // btnsair
+            // 
+            this.btnsair.Location = new System.Drawing.Point(613, 259);
+            this.btnsair.Name = "btnsair";
+            this.btnsair.Size = new System.Drawing.Size(75, 23);
+            this.btnsair.TabIndex = 14;
+            this.btnsair.Text = "Sair";
+            this.btnsair.UseVisualStyleBackColor = true;
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
+            // 
+            // lblabono
+            // 
+            this.lblabono.AutoSize = true;
+            this.lblabono.Location = new System.Drawing.Point(253, 261);
+            this.lblabono.Name = "lblabono";
+            this.lblabono.Size = new System.Drawing.Size(38, 13);
+            this.lblabono.TabIndex = 15;
+            this.lblabono.Text = "Abono";
+            // 
+            // txtabono
+            // 
+            this.txtabono.Enabled = false;
+            this.txtabono.Location = new System.Drawing.Point(308, 254);
+            this.txtabono.Name = "txtabono";
+            this.txtabono.Size = new System.Drawing.Size(100, 20);
+            this.txtabono.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtabono);
+            this.Controls.Add(this.lblabono);
+            this.Controls.Add(this.btnsair);
             this.Controls.Add(this.txtapnome);
             this.Controls.Add(this.lblnomes);
             this.Controls.Add(this.btnlimpar);
@@ -201,6 +238,9 @@
         private System.Windows.Forms.Button btnlimpar;
         private System.Windows.Forms.Label lblnomes;
         private System.Windows.Forms.TextBox txtapnome;
+        private System.Windows.Forms.Button btnsair;
+        private System.Windows.Forms.Label lblabono;
+        private System.Windows.Forms.TextBox txtabono;
     }
 }
 
